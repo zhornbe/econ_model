@@ -54,8 +54,6 @@ Real-world parameters have been used where possible and are clearly cited in cod
 - CMS-derived cost estimates (CY2024)
 - Rural patient disutilities and transport burdens
 
-See inline comments in `improved_model.py` for citations and justification.
-
 ## 🛠️ Customization
 
 You can adjust:
