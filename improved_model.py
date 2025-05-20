@@ -49,7 +49,7 @@ class ModelParams:
             "CAD Untreated": 0.78,
             "PCI Treated": 0.85,
             "CABG Treated": 0.83,
-            "Post-MI": 0.65,
+            "Post-MI": 0.72,
             "Dead": 0.0
         }
 
@@ -64,7 +64,7 @@ class ModelParams:
         self.costs = {
             # Diagnostic test costs
             "FFRCT": 1450,
-            "Stress Test": 350,
+            "Stress Test": 600,
             "ICA": 5000,
 
             # Intervention costs
@@ -95,13 +95,13 @@ class ModelParams:
         # Diagnostic test performance characteristics
         self.test_characteristics = {
             "FFRCT": {
-                "Sensitivity": 0.90,
-                "Specificity": 0.79,
+                "Sensitivity": 0.89,
+                "Specificity": 0.82,
                 "Inconclusive Rate": 0.05,
                 "Rural Feasibility": 0.95
             },
             "Stress Test": {
-                "Sensitivity": 0.70,
+                "Sensitivity": 0.65,
                 "Specificity": 0.75,
                 "Inconclusive Rate": 0.10,
                 "Rural Feasibility": 0.90
@@ -117,13 +117,13 @@ class ModelParams:
 
         # Treatment effects: reduction in MI risk and mortality
         self.treatment_effects = {
-            "PCI":      {"Reduction in MI Risk": 0.65, "Reduction in Mortality": 0.40},
-            "CABG":     {"Reduction in MI Risk": 0.75, "Reduction in Mortality": 0.50},
-            "Medical Therapy": {"Reduction in MI Risk": 0.40, "Reduction in Mortality": 0.25}
+            "PCI":      {"Reduction in MI Risk": 0.15, "Reduction in Mortality": 0.00},
+            "CABG":     {"Reduction in MI Risk": 0.40, "Reduction in Mortality": 0.20},
+            "Medical Therapy": {"Reduction in MI Risk": 0.10, "Reduction in Mortality": 0.00}
         }
 
         # Pre-test disease prevalence
-        self.pretest_probability = 0.40
+        self.pretest_probability = 0.15
 
         # Base transition rates per year
         self.base_transitions = {
@@ -138,7 +138,7 @@ class ModelParams:
                               70: 0.021, 75: 0.033, 80: 0.054, 85: 0.095}
 
         # Repeat intervention rates each year
-        self.repeat_intervention = {"PCI": 0.12, "CABG": 0.02}
+        self.repeat_intervention = {"PCI": 0.09, "CABG": 0.02}
 
         # Number of healthcare visits per year by state
         self.visits_per_year = {
